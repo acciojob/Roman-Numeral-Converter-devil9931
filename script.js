@@ -8,10 +8,10 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
- let result = "";
+let result = "";
 
-  for (let symbol in obj) {
-    let value = obj[symbol];
+  for (let key in obj) {
+    let [symbol, value] = obj[key];   // unpack symbol and value
     while (num >= value) {
       result += symbol;
       num -= value;
@@ -19,9 +19,9 @@ function convertToRoman(num) {
   }
 
   return result;
-  //your code here
+  }
 
-}
+ 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 console.log(convertToRoman(36));
