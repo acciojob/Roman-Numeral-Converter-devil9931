@@ -8,9 +8,10 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
-let result = "";
+ let result = "";
 
-  for (let [symbol, value] of obj) {
+  for (let symbol in obj) {
+    let value = obj[symbol];
     while (num >= value) {
       result += symbol;
       num -= value;
